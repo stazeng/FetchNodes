@@ -1,1 +1,1 @@
-提取ChromeGo/EdgeGo里面的节点
+从 ChromeGo/EdgeGo 里面获取可用节点！
