@@ -6,7 +6,7 @@ async function handleRequest(request) {
 	// 定义要发送请求的地址数组，每个元素包含一个 url 和一个处理函数
 
 	const sites = [
-		//hy
+		//hysteria
 		{ url: "https://www.gitlabip.xyz/Alvin9999/pac2/master/hysteria/1/config.json", type: "hysteria" },
 		{ url: "https://gitlab.com/free9999/ipupdate/-/raw/master/hysteria/config.json", type: "hysteria" },
 		{ url: "https://www.githubip.xyz/Alvin9999/pac2/master/hysteria/config.json", type: "hysteria" },
@@ -15,7 +15,8 @@ async function handleRequest(request) {
 		{ url: "https://gitlab.com/free9999/ipupdate/-/raw/master/hysteria/2/config.json", type: "hysteria" },
 		{ url: "https://www.githubip.xyz/Alvin9999/pac2/master/hysteria/2/config.json", type: "hysteria" },
 		{ url: "https://fastly.jsdelivr.net/gh/Alvin9999/pac2@latest/hysteria/2/config.json", type: "hysteria" },
-		//hy2
+		
+		//hysteria2
 		{ url: 'https://www.gitlabip.xyz/Alvin9999/pac2/master/hysteria2/1/config.json', type: "hysteria2" },
 		{ url: 'https://gitlab.com/free9999/ipupdate/-/raw/master/hysteria2/config.json', type: "hysteria2" },
 		{ url: 'https://www.githubip.xyz/Alvin9999/pac2/master/hysteria2/config.json', type: "hysteria2" },
@@ -24,6 +25,7 @@ async function handleRequest(request) {
 		{ url: 'https://gitlab.com/free9999/ipupdate/-/raw/master/hysteria2/2/config.json', type: "hysteria2" },
 		{ url: 'https://www.githubip.xyz/Alvin9999/pac2/master/hysteria2/2/config.json', type: "hysteria2" },
 		{ url: 'https://fastly.jsdelivr.net/gh/Alvin9999/pac2@latest/hysteria2/2/config.json', type: "hysteria2" },
+		
 		//xray
 		{ url: 'https://www.gitlabip.xyz/Alvin9999/pac2/master/xray/1/config.json', type: "xray" },
 		{ url: 'https://gitlab.com/free9999/ipupdate/-/raw/master/xray/config.json', type: "xray" },
@@ -32,11 +34,13 @@ async function handleRequest(request) {
 		{ url: 'https://www.gitlabip.xyz/Alvin9999/pac2/master/xray/3/config.json', type: "xray" },
 		{ url: 'https://gitlab.com/free9999/ipupdate/-/raw/master/xray/2/config.json', type: "xray" },
 		{ url: 'https://www.githubip.xyz/Alvin9999/pac2/master/xray/2/config.json', type: "xray" },
+		
 		//singbox
 		{ url: "https://gitlab.com/free9999/ipupdate/-/raw/master/singbox/config.json", type: "singbox" },
 		{ url: "https://www.githubip.xyz/Alvin9999/pac2/master/singbox/config.json", type: "singbox" },
 		{ url: "https://fastly.jsdelivr.net/gh/Alvin9999/pac2@latest/singbox/config.json", type: "singbox" },
 		{ url: "https://www.gitlabip.xyz/Alvin9999/pac2/master/singbox/1/config.json", type: "singbox" },
+		
 		//clash
 		{ url: "https://gitlab.com/free9999/ipupdate/-/raw/master/clash.meta2/config.yaml", type: "clash" },
 		{ url: "https://gitlab.com/free9999/ipupdate/-/raw/master/clash.meta2/config.yaml", type: "clash" },
@@ -54,12 +58,14 @@ async function handleRequest(request) {
 		{ url: "https://raw.githubusercontent.com/Alvin9999/pac2/master/quick/1/config.yaml", type: "clash" },
 		{ url: "https://raw.githubusercontent.com/Alvin9999/pac2/master/quick/config.yaml", type: "clash" },
 		{ url: "https://raw.githubusercontent.com/Alvin9999/pac2/master/quick/3/config.yaml", type: "clash" },
+		
 		//naive		
 		{ url: "https://www.gitlabip.xyz/Alvin9999/PAC/master/naiveproxy/1/config.json", type: "naive" },
 		{ url: "https://gitlab.com/free9999/ipupdate/-/raw/master/naiveproxy/config.json", type: "naive" },
 		{ url: "https://www.githubip.xyz/Alvin9999/PAC/master/naiveproxy/config.json", type: "naive" },
 		{ url: "https://fastly.jsdelivr.net/gh/Alvin9999/PAC@latest/naiveproxy/config.json", type: "naive" },
-		// 添加更多的网站地址和类型...
+		
+		// 此次可继续添加更多的网站地址和类型...
 	];
 
 	// 存储拼接后的字符串，用于去重
@@ -117,7 +123,7 @@ async function handleRequest(request) {
 
 	// 处理hysteria2的数据
 	function processHysteria2(data) {
-		// 根据类型2的数据提取字段，并按指定格式拼接字符串
+		// 根据hysteria2的数据提取字段，并按指定格式拼接字符串
 		// 这里提供一个示例，实际情况需要根据实际数据结构调整
 		// 从 JSON 数据中提取所需字段
 		const auth = data.auth || '';
@@ -189,7 +195,7 @@ async function handleRequest(request) {
 				let server = proxy.server
 				let port = proxy.port
 
-				let protocol = proxy.protocol		// 处理 proxy.up
+				let protocol = proxy.protocol	// 处理 proxy.up
 				let up
 				if (typeof proxy.up === 'number') {
 					up = proxy.up;
